@@ -19,47 +19,9 @@ def hello_world():
 @app.route("/", methods=["POST"])
 def find_products():
         if request.method == 'POST':
-             usr_name = request.form.get("usr_name")
-             if usr_name != "":
-                  products = get_product_list(usr_name)
+             usr_name = request.form.get("usr_name")            # get the input user name
+             if usr_name != "":                                 # if user name not empty
+                  products = get_product_list(usr_name)         # get the final list of 5 products to suggest to the customer
              else:
                   return render_template("home_page.html")
-        return render_template("content.html", products=products)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        return render_template("content.html", user_name = usr_name, products=products)

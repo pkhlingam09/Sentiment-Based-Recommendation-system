@@ -3,11 +3,11 @@
 {% extends "home_page.html" %}
 
 {% block username %}
-    <div><input type="text" name="username" value="{{ products[0] }}" readonly></div>
+    <div><input type="text" name="username" value="{{ user_name }}" readonly></div>
 {% endblock %}
 
 {% block content %}
-    {% for product in products[1:] %}
+    {% for product in products %}
         <div class="prod_list">
             <div id="prod_name" class="prod_name" name="prod_name">{{ product[0] }}</div>
             <div class="prod_attr">
