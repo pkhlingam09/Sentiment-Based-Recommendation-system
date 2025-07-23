@@ -1,0 +1,69 @@
+
+
+<!-- templates/template_base.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href='{{ url_for("static", filename="style.css") }}'>
+    </head>
+    <body>
+        <div id="main_title" class="main_title">
+            <h1>SENTIMENT ANALYSIS</h1>
+        </div>
+        <section name="user_details" id="user_details" class="user_details">
+            <div name="name_disp">
+                {% block username %}{% endblock %}
+            </div>
+            <div name="form_user_name">
+                <form name="submit_usr_name" method="post" action="/">
+                    <input name="usr_name" type="text" placeholder="user_name" autocomplete="off">
+                    <button name="submit" type="submit" value="submit">submit</button>
+                </form>
+            </div>
+        </section>
+        <section name="content" id="content" class="content">
+            {% block content %}{% endblock %}
+        </section>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

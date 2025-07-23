@@ -1,0 +1,34 @@
+
+
+{% extends "home_page.html" %}
+
+{% block username %}
+    <div><input type="text" name="username" value="{{ products[0] }}" readonly></div>
+{% endblock %}
+
+{% block content %}
+    {% for product in products[1:] %}
+        <div class="prod_list">
+            <div id="prod_name" class="prod_name" name="prod_name">{{ product[0] }}</div>
+            <div class="prod_attr">
+            {% for keys, vals in product[-1].items() %}
+                {% if keys != "userreview" %}
+                    <div class="prod_attr-col"> 
+                        <label for="{{ keys }}">{{ keys.title() }}:</label>
+                        <input id="{{ keys }}" type="text" name="{{ keys }}" value="{{ vals }}" readonly>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            </div>
+            <div>
+                <div class="prod_review">
+                    <label>User Reviews:</label>
+                    <textarea id="usrreview" type="text" name="{{ product[-1]['userreview'] }}" readonly>{{ product[-1]['userreview'] }}</textarea>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+
+

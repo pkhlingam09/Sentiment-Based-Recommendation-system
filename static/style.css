@@ -1,0 +1,145 @@
+body {
+    background-color: #ccae05; /* rgb(224, 154, 74); */
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.main_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(109, 109, 109); /* or any shade of rgb(109, 109, 109) you prefer */
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 5px 15% 5px 15%;
+    margin: 15px auto;
+    width:max-content;      
+    color: white;               /* Ensures text is readable on rgb(109, 109, 109) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: soft shadow */
+    text-align: center;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.user_details {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* name_disp on left, form_user_name on right */
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+[name="name_disp"] input {
+    /* Optional styling */
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+[name="form_user_name"] form {
+    display: grid;
+    /* grid-template-columns: auto 1fr; button on left, input on right */
+    /* gap: 10px; */
+    align-items: right;
+    margin-left: 25%;
+}
+
+[name="form_user_name"] input {
+    /* width: 25rem; */
+    padding: 6px 10px;
+    border-radius: 6px 6px 0 0;
+    border: 1px solid #ccc;
+}
+
+[name="form_user_name"] button {
+    padding: 6px 12px;
+    border-radius: 0 0 6px 6px;
+    border: none;
+    background-color: rgb(109, 109, 109);
+    color: white;
+    cursor: pointer;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.prod_list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr) 3fr;
+    height: 15vh;
+    box-sizing: border-box;
+    align-items: start;
+    margin: 10px 40px 10px 20px;
+    padding: 5px;
+    background-color: rgb(109, 109, 109);
+    border-radius: 20px;
+    border: 2px solid beige;
+}
+
+.prod_list input {
+    width: 180px;
+    border:none;
+    color: beige;
+    background: transparent;
+    margin: 0 15px 0 3px;
+    font: inherit;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.prod_name {
+    padding: 3rem 0 0 2rem;
+    font-weight: bold;
+    color: beige;
+}
+
+.prod_attr {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    padding: 30px 0 30px 0;
+}
+
+.prod_attr label {
+    font-weight: bold;
+    color: beige;
+}
+
+.prod_attr-col {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 5px;
+    padding: 5px 5px 5px 5px;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.prod_review {
+    display: grid;
+    grid-template-columns: 20% 110%;
+    align-items: center;
+    color: beige;
+}
+
+.prod_review label {
+    text-align: right;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.prod_review textarea {
+    resize: vertical;
+    width: 65%;
+    height: 80px;
+    margin: 20px 0 15px 0;
+    color: rgb(241, 241, 218);
+    background: gray;
+    border-radius: 3px;
+    border-color: #ccae05;
+    border-radius: 10px;
+    border-width: 3px;
+}
