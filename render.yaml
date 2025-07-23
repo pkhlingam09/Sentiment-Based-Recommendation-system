@@ -2,7 +2,7 @@ version: "1"
 services:
   - type: web
     name: Sentiment-Based-Recommendation-system
-    runtime: python 3.10.13
+    runtime: python
     repo: https://github.com/pkhlingam09/Sentiment-Based-Recommendation-system
     plan: free
     region: oregon
