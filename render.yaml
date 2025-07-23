@@ -2,12 +2,10 @@ version: "1"
 services:
   - type: web
     name: Sentiment-Based-Recommendation-system
-    runtime: python
+    runtime: python 3.10.13
     repo: https://github.com/pkhlingam09/Sentiment-Based-Recommendation-system
     plan: free
     region: oregon
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn main:app
     autoDeployTrigger: commit
-    build:
-      pythonVersion: 3.10.13
