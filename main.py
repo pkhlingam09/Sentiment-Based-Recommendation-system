@@ -27,7 +27,4 @@ def find_products():
                   return render_template("home_page.html")
         return render_template("content.html", user_name = usr_name, products=products)
 
-if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))  # default to 5000 locally
-    app.run(host='0.0.0.0', port=port)
     
